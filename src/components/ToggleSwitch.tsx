@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-function ToggleSwitch(props: {size: number}){
-    const [turnOn, setTurnOn] = useState(false)   
+function ToggleSwitch(props: {size: number, turn?: boolean}){
+    const [turnOn, setTurnOn] = useState(props.turn ? props.turn : false)
 
     const click = () => {
         setTurnOn(!turnOn)

@@ -19,7 +19,7 @@ const App = () => {
     })    
   },[])
 
-  return (<div>
+  return (<div className="cardWrapper">
     { cardData.map(card => <Card key={card.name} {...card} />) }
   </div>)
 }

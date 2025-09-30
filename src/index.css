@@ -95,3 +95,38 @@ button:focus-visible {
     border-color: green;
   }
 }
+
+.cardWrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .top{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px;
+    h3{
+      margin: 0;
+    }
+  }
+  .bot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  .cardWrapper{
+  grid-template-columns: repeat(1, 1fr);
+  }
+}

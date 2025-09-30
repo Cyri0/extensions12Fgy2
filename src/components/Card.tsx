@@ -3,7 +3,7 @@ import ToggleSwitch from "./ToggleSwitch"
 
 const Card = (props: CardDataType) => {
     return (
-    <section>
+    <section className="card">
         <div className="top">
             <img src={props.logo} />
             <div>
@@ -13,7 +13,8 @@ const Card = (props: CardDataType) => {
         </div>
         <div className="bot">
             <button>Remove</button>
-            <ToggleSwitch size={20} />
+            <ToggleSwitch size={20} 
+            turn={props.isActive} />
         </div>
     </section>)
 }
