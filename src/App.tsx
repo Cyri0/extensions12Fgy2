@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import Card from "./components/Card";
 
-type CardDataType = {
+export type CardDataType = {
   description: string,
   isActive: boolean,
   logo: string,
@@ -15,12 +16,11 @@ const App = () => {
     .then(res => res.json())
     .then(data => {
       setCardData(data);
-    })
+    })    
   },[])
 
-
   return (<div>
-    { cardData.map(card => <img src={card.logo}/>) }
+    { cardData.map(card => <Card key={card.name} {...card} />) }
   </div>)
 }
 
